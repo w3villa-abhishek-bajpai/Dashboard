@@ -3,7 +3,7 @@ import { Search, Bell, Globe, UserCircle } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between bg-white shadow-md px-6 py-4">
+    <header className="flex items-center justify-between bg-white shadow-md px-6 py-4 rounded-full">
       {/* Search Bar */}
       <div className="flex items-center w-1/3">
         <input

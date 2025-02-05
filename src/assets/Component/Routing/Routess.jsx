@@ -1,25 +1,37 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "../components/Home";
-import About from "../components/About";
-import Contact from "../components/Contact";
-import Navbar from "../components/Navbar";
+import Sidebar from "../Sidebar";
+import Overview from "../Overview";
+import Employee from "../Employee";
+import Form from "../Form";
 
-const AppRoutes = () => {
+
+
+
+const Routess = () => {
   return (
     <Router>
-      {/* Include Navbar */}
-      <Navbar />
+      <div className="flex max-h-screen ">
+        {/* Sidebar */}
+        <Sidebar />
 
-      {/* Define Routes */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
-      </Routes>
+        {/* Main Content */}
+        <div className="flex-1 p-6 bg-gray-100   max-h-screen overflow-y-auto scrollbar-hide">
+          <Routes>
+            {/* Overview Route - Loads Homepage */}
+            <Route path="/" element={<Overview />} />
+
+            {/* Other Routes */}
+            <Route path="/employee" element={<Employee />} />
+            <Route path="/form" element={<Form/>} />
+           
+      
+            
+          </Routes>
+        </div>
+      </div>
     </Router>
   );
 };
 
-export default AppRoutes;
+export default Routess;
