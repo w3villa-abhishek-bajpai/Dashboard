@@ -21,7 +21,7 @@ const Sidebar = () => {
             </li>
             <li className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-700">
               <Calendar className="w-5 h-5" />
-              <span>Calendar</span>
+              <span>Employee</span>
             </li>
             <li className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-700">
               <FileText className="w-5 h-5" />

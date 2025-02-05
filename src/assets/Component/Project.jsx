@@ -6,8 +6,8 @@ import { CiClock2 } from "react-icons/ci";
 const Project = () => {
   return (
     <div className="flex  justify-between bg-gray-100 px-6  h-auto rounded-lg shadow-lg ">
-      <div className="w-[30%]  rounded-2xl bg-white">
-        <div className="w-[95%] text-lg font-semibold text-gray-700 ml-3 mt-3 bg-white">
+      <div className="w-[33%]  rounded-2xl bg-white">
+        <div className="w-[95%] text-lg font-semibold text-gray-700 ml-6 mt-3 bg-white">
           Project Summary
         </div>
         <div className="w-[91%] border-2 ml-5 mt-7 rounded-lg p-2 relative">
@@ -90,9 +90,9 @@ const Project = () => {
       </div>
 
 
-      <div className="w-[30%] border-2 bg-white rounded-2xl p-2">
+      <div className="w-[33%] border-2 bg-white rounded-2xl p-2">
         {/* Circular Progress Chart */}
-        <h3 className="text-lg font-semibold text-gray-700 mt-2 bg-white">
+        <h3 className="text-lg font-semibold text-gray-700 mt-2 ml-6 bg-white">
           Project Overview
         </h3>
 
@@ -136,8 +136,8 @@ const Project = () => {
         </ul> 
       </div>
 
-      <div className="w-[30%]  border-black rounded-2xl bg-white">
-        <div className="w-full text-lg font-semibold text-gray-700 ml-3 mt-3">
+      <div className="w-[33%]  border-black rounded-2xl bg-white">
+        <div className="w-full text-lg font-semibold text-gray-700 ml-6 mt-3">
           Daily Task
         </div>
         <div className="w-[91%] border-2 ml-5 mt-7 mb-4 rounded-lg p-4 bg-white">

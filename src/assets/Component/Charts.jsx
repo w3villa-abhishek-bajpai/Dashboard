@@ -21,7 +21,7 @@ const Charts = () => {
   ];
 
   return (
-    <div className="flex items-center justify-between bg-gray-50 px-6 py-4 h-auto rounded-lg shadow-lg">
+    <div className="flex items-center justify-between bg-gray-100 px-6 py-4 h-auto rounded-lg shadow-lg">
       {/* Monthly Target Chart */}
       <div className="w-[30%] bg-white rounded-lg shadow-md p-6">
         <h3 className="text-lg font-semibold text-gray-700 mb-4">Monthly Target</h3>

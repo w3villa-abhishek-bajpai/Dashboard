@@ -5,8 +5,8 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 
 const Cards = () => {
   return (
-    <div className="flex items-center justify-between bg-gray-100 shadow-md px-6 py-4 h-auto  relative">
-      <div className="w-[23%]  p-5 rounded-[30px] bg-white">
+    <div className="flex items-center justify-between bg-gray-100  px-6 py-6 h-auto  relative">
+      <div className="w-[25%]  p-5 rounded-[30px] shadow-lg bg-white">
         <p className="font-bold flex justify-between">Project Dashboard <BsThreeDotsVertical /></p>
         <p className="text-sm py-1 text-gray-500">Created a dashboard design</p>
         <div className="flex justify-between ">
@@ -32,7 +32,7 @@ const Cards = () => {
         </div>
       </div>
 
-      <div className="w-[23%]  p-5 rounded-[30px] bg-white">
+      <div className="w-[25%]  p-5 rounded-[30px] shadow-lg bg-white">
       <p className="font-bold flex justify-between">Project Dashboard <BsThreeDotsVertical /></p>
         <p className="text-sm py-1 text-gray-500">Created a dashboard design</p>
         <div className="  flex justify-between ">
@@ -55,7 +55,7 @@ const Cards = () => {
         </div>
       </div>
 
-      <div className="w-[23%]  p-5 rounded-[30px] bg-white">
+      <div className="w-[25%]  p-5 rounded-[30px] shadow-lg bg-white">
       <p className="font-bold flex justify-between">Project Dashboard <BsThreeDotsVertical /></p>
         <p className="text-sm py-1 text-gray-500">Created a dashboard design</p>
         <div className=" flex justify-between ">
@@ -78,7 +78,7 @@ const Cards = () => {
         </div>
       </div>
 
-      <div className="w-[23%]  p-5 rounded-[30px] bg-white">
+      <div className="w-[24%]  p-5 rounded-[30px] shadow-lg bg-white">
       <p className="font-bold flex justify-between">Project Dashboard <BsThreeDotsVertical /></p>
         <p className="text-sm py-1 text-gray-500">Created a dashboard design</p>
         <div className="flex justify-between ">

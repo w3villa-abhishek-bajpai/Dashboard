@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-    <div className='flex h-full '>
+    <div className='border-2 border-black flex '>
     <Sidebar/>
      <div className="flex-grow h-full "><Header/>
      <Content/>

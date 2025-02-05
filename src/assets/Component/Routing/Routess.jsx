@@ -1,36 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
-import Overview from "./pages/Overview";
-import Calendar from "./pages/Calendar";
-import Tickets from "./pages/Tickets";
-import FileManager from "./pages/FileManager";
-import Kanban from "./pages/Kanban";
-import Projects from "./pages/Projects";
-import Tasks from "./pages/Tasks";
+import Home from "../components/Home";
+import About from "../components/About";
+import Contact from "../components/Contact";
+import Navbar from "../components/Navbar";
 
-const App = () => {
+const AppRoutes = () => {
   return (
     <Router>
-      <div className="flex">
-        {/* Sidebar */}
-        <Sidebar />
+      {/* Include Navbar */}
+      <Navbar />
 
-        {/* Main Content */}
-        <div className="flex-1 p-6 bg-gray-100">
-          <Routes>
-            <Route path="/" element={<Overview />} />
-            <Route path="/calendar" element={<Calendar />} />
-            <Route path="/tickets" element={<Tickets />} />
-            <Route path="/file-manager" element={<FileManager />} />
-            <Route path="/kanban" element={<Kanban />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/tasks" element={<Tasks />} />
-          </Routes>
-        </div>
-      </div>
+      {/* Define Routes */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+      </Routes>
     </Router>
   );
 };
 
-export default App;
+export default AppRoutes;
