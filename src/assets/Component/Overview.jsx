@@ -8,7 +8,7 @@ import Project from "./Project";
 const Overview = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Content />
       <Cards />
       <Charts />

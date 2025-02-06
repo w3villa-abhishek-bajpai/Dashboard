@@ -1,116 +1,91 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Home, Calendar, FileText, Kanban, Folder, List, LogOut, Settings, User, Shield } from "lucide-react";
+import { Home, Calendar, FileText, Kanban, Folder, List, LogOut, Settings, User, Shield, Menu } from "lucide-react";
 
-const Sidebar = () => {
+const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
   return (
-    <div className="w-64 bg-gray-900 text-gray-300 flex flex-col h-screen">
-      {/* Logo Section */}
-      <div className="p-6 text-xl font-bold text-white">
-        <span className="text-orange-500">Panze</span>
+    <div>
+      {/* Sidebar */}
+      <div 
+        className={`fixed top-0 left-0 h-screen w-64 bg-gray-900 text-gray-300 flex flex-col shadow-lg transform transition-transform duration-300 ease-in-out z-50
+          ${isSidebarOpen ? "translate-x-0" : "-translate-x-64"} lg:translate-x-0 lg:relative`}
+      >
+        {/* Logo & Close Button */}
+        <div className="flex justify-between items-center p-6 text-xl font-bold text-white">
+          <span className="text-orange-500">Panze</span>
+          {/* Close Button (Only on Mobile) */}
+          <button 
+            className="lg:hidden p-2 text-white bg-gray-700 rounded-md"
+            onClick={toggleSidebar}
+          >
+            <Menu className="w-6 h-6 text-white" />
+          </button>
+        </div>
+
+        {/* Navigation */}
+        <nav className="flex-1 px-4">
+          <div className="mb-6">
+            <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Dashboards</p>
+            <ul className="mt-5 space-y-2">
+              <SidebarItem to="/" icon={<Home />} label="Overview" />
+              <SidebarItem to="/employee" icon={<Calendar />} label="Employee" />
+              <SidebarItem to="/form" icon={<FileText />} label="Form" />
+              <SidebarItem to="/file-manager" icon={<Kanban />} label="File Manager" />
+              <SidebarItem to="/kanban" icon={<Kanban />} label="Kanban" />
+              <SidebarItem to="/projects" icon={<Folder />} label="Projects" />
+              <SidebarItem to="/tasks" icon={<List />} label="Tasks" />
+            </ul>
+          </div>
+
+          {/* Administrator */}
+          <div className="mb-6">
+            <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Administrator</p>
+            <ul className="mt-3 space-y-2">
+              <SidebarItem icon={<Shield />} label="Auth Pages" />
+              <SidebarItem icon={<FileText />} label="Extra Pages" />
+              <SidebarItem icon={<Settings />} label="Layout" />
+            </ul>
+          </div>
+
+          {/* Settings */}
+          <div className="mb-6">
+            <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Settings</p>
+            <ul className="mt-3 space-y-2">
+              <SidebarItem icon={<User />} label="Supports" />
+              <SidebarItem icon={<Settings />} label="Settings" />
+              <SidebarItem icon={<LogOut />} label="Log Out" />
+            </ul>
+          </div>
+        </nav>
       </div>
 
-      {/* Navigation */}
-      <nav className="flex-1 px-4">
-        <div className="mb-6">
-          <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Dashboards</p>
-          <ul className="mt-5 space-y-2">
-            <li className="rounded-lg hover:bg-orange-500">
-              <Link to="/" className="flex items-center space-x-3 p-2 text-white w-full">
-                <Home className="w-5 h-5" />
-                <span>Overview</span>
-              </Link>
-            </li>
-            <li className="rounded-lg hover:bg-orange-500">
-              <Link to="/employee" className="flex items-center space-x-3 p-2 text-white w-full">
-                <Calendar className="w-5 h-5" />
-                <span>Employee</span>
-              </Link>
-            </li>
-            <li className="rounded-lg hover:bg-orange-500">
-              <Link to="/form" className="flex items-center space-x-3 p-2 text-white w-full">
-                <FileText className="w-5 h-5" />
-                <span>Form</span>
-              </Link>
-            </li>
-            <li className="rounded-lg hover:bg-orange-500">
-              <Link to="/file-manager" className="flex items-center space-x-3 p-2 text-white w-full">
-                <Kanban className="w-5 h-5" />
-                <span>File Manager</span>
-              </Link>
-            </li>
-            <li className="rounded-lg hover:bg-orange-500">
-              <Link to="/kanban" className="flex items-center space-x-3 p-2 text-white w-full">
-                <Kanban className="w-5 h-5" />
-                <span>Kanban</span>
-              </Link>
-            </li>
-            <li className="rounded-lg hover:bg-orange-500">
-              <Link to="/projects" className="flex items-center space-x-3 p-2 text-white w-full">
-                <Folder className="w-5 h-5" />
-                <span>Projects</span>
-              </Link>
-            </li>
-            <li className="rounded-lg hover:bg-orange-500">
-              <Link to="/tasks" className="flex items-center space-x-3 p-2 text-white w-full">
-                <List className="w-5 h-5" />
-                <span>Tasks</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Administrator */}
-        <div className="mb-6">
-          <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Administrator</p>
-          <ul className="mt-3 space-y-2">
-            <li className="rounded-lg hover:bg-orange-500">
-              <span className="flex items-center space-x-3 p-2 text-white">
-                <Shield className="w-5 h-5" />
-                <span>Auth Pages</span>
-              </span>
-            </li>
-            <li className="rounded-lg hover:bg-orange-500">
-              <span className="flex items-center space-x-3 p-2 text-white">
-                <FileText className="w-5 h-5" />
-                <span>Extra Pages</span>
-              </span>
-            </li>
-            <li className="rounded-lg hover:bg-orange-500">
-              <span className="flex items-center space-x-3 p-2 text-white">
-                <Settings className="w-5 h-5" />
-                <span>Layout</span>
-              </span>
-            </li>
-          </ul>
-        </div>
-
-        {/* Settings */}
-        <div className="mb-6">
-          <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Settings</p>
-          <ul className="mt-3 space-y-2">
-            <li className="rounded-lg hover:bg-orange-500">
-              <span className="flex items-center space-x-3 p-2 text-white">
-                <User className="w-5 h-5" />
-                <span>Supports</span>
-              </span>
-            </li>
-            <li className="rounded-lg hover:bg-orange-500">
-              <span className="flex items-center space-x-3 p-2 text-white">
-                <Settings className="w-5 h-5" />
-                <span>Settings</span>
-              </span>
-            </li>
-            <li className="rounded-lg hover:bg-orange-500">
-              <span className="flex items-center space-x-3 p-2 text-white">
-                <LogOut className="w-5 h-5" />
-                <span>Log Out</span>
-              </span>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      {/* Overlay to Close Sidebar on Mobile */}
+      {isSidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          onClick={toggleSidebar}
+        ></div>
+      )}
     </div>
+  );
+};
+
+// Sidebar Item Component for Reusability
+const SidebarItem = ({ to, icon, label }) => {
+  return (
+    <li className="rounded-lg hover:bg-orange-500">
+      {to ? (
+        <Link to={to} className="flex items-center space-x-3 p-2 text-white w-full">
+          {icon}
+          <span>{label}</span>
+        </Link>
+      ) : (
+        <span className="flex items-center space-x-3 p-2 text-white cursor-pointer">
+          {icon}
+          <span>{label}</span>
+        </span>
+      )}
+    </li>
   );
 };
 
