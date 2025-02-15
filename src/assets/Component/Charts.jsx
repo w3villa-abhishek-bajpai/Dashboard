@@ -20,8 +20,8 @@ const Charts = () => {
   ];
 
   return (
-    <div className="flex flex-wrap gap-4 justify-center bg-gray-100 p-4">
-      <div className="w-full md:w-[48%] lg:w-[31%] bg-white rounded-2xl shadow-lg p-4">
+    <div className="flex flex-wrap gap-4 justify-center lg:flex-row bg-gray-100 p-4">
+      <div className="w-full md:w-[48%] lg:w-[48%] bg-white rounded-2xl shadow-lg p-4">
         <h3 className="text-lg font-semibold text-gray-700 mb-4 text-center">Monthly Target</h3>
         <ResponsiveContainer width="100%" height={200}>
           <PieChart>
@@ -35,7 +35,7 @@ const Charts = () => {
         </ResponsiveContainer>
       </div>
 
-      <div className="w-full md:w-[48%] lg:w-[68%] bg-white rounded-2xl shadow-lg p-4">
+      <div className="w-full md:w-[48%] lg:w-[48%] bg-white rounded-2xl shadow-lg p-4">
         <h3 className="text-lg font-semibold text-gray-700 mb-4 text-center">Project Statistics</h3>
         <ResponsiveContainer width="100%" height={250}>
           <BarChart data={projectStatisticsData} barGap={10}>
