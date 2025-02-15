@@ -3,7 +3,7 @@ import { Search, Bell, Globe, UserCircle, Menu } from "lucide-react";
 
 const Header = ({ toggleSidebar }) => {
   return (
-    <header className="flex items-center justify-between bg-white shadow-md px-4 py-3 rounded-lg md:px-6 md:py-4 ">
+    <header className="flex items-center justify-between bg-white shadow-md px-4 py-3 rounded-lg md:px-6 md:py-4">
       {/* Left Section - Hamburger Menu & Search Bar */}
       <div className="flex items-center w-full md:w-1/3 ">
         {/* Hamburger Menu - Visible Only on Small Screens */}

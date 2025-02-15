@@ -30,7 +30,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               <SidebarItem to="/" icon={<Home />} label="Overview" />
               <SidebarItem to="/employee" icon={<Calendar />} label="Employee" />
               <SidebarItem to="/form" icon={<FileText />} label="Form" />
-              <SidebarItem to="/file-manager" icon={<Kanban />} label="File Manager" />
+              <SidebarItem to="/get" icon={<Kanban />} label="Get" />
               <SidebarItem to="/kanban" icon={<Kanban />} label="Kanban" />
               <SidebarItem to="/projects" icon={<Folder />} label="Projects" />
               <SidebarItem to="/tasks" icon={<List />} label="Tasks" />

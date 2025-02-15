@@ -12,7 +12,7 @@ const Overview = () => {
       <Content />
       <Cards />
       <Charts />
-      <Project />
+    <Project />
     </div>
   );
 };

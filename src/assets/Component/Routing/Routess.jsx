@@ -5,6 +5,8 @@ import Overview from "../Overview";
 import Employee from "../Employee";
 import Form from "../Form";
 import Header from "../Header";
+import Get from "../Get";
+
 
 const Routess = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -30,13 +32,15 @@ const Routess = () => {
         )}
 
         {/* Main Content */}
-        <div className="flex-1 p-6 bg-gray-100 max-h-screen overflow-y-auto scrollbar-hide">
+        <div className="flex-1 p- bg-gray-100 max-h-screen overflow-y-auto scrollbar-hide">
           <Header toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
 
           <Routes>
             <Route path="/" element={<Overview />} />
             <Route path="/employee" element={<Employee />} />
             <Route path="/form" element={<Form />} />
+            <Route path="/get" element={<Get />} />
+            
           </Routes>
         </div>
       </div>

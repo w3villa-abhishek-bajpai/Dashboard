@@ -4,7 +4,7 @@ import { faGreaterThan } from '@fortawesome/free-solid-svg-icons'
 
 const Content = () => {
   return (
-    <div className='flex items-center justify-between bg-gray-100  px-6 py-4 '>
+    <div className='flex items-center justify-between bg-gray-100  px-6 py-3 '>
         <div className="">
             <p className="text-gray-700 ">Dashboard  <FontAwesomeIcon icon={faGreaterThan} />   Overview</p>
         </div>
